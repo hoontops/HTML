@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ko">
+<!--Accordian  -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  
+    <title>Bootstrap, world!</title>
+  
+  
+  
+</head>
+	<body>
+		<h2>button and button groups, bootstrap</h2>
+		<p> 일단 내입맛대로 수정해봄 </p>
+			<button type="button" class="btn btn-primary">Primary</button>
+			<button type="button" class="btn btn-secondary">Secondary</button>
+			<button type="button" class="btn btn-success">Success</button>
+			<button type="button" class="btn btn-danger">Danger</button>
+			<button type="button" class="btn btn-warning">Warning</button>
+			<button type="button" class="btn btn-info">Info</button>
+			<button type="button" class="btn btn-light ">Light</button>
+			<button type="button" class="btn btn-dark ">LightDark</button>
+			<button type="button" class="btn btn-link text-success text-nowrap" style="text-decoration: none"><Strong>Link 배경이 하얀건가 투명인가</Strong></button>
+
+		<p> .btn 클래스로도 사용가능해서, a태그나 INPUT 시에도 사용가능함 </p>
+		<a class="btn btn-primary" href="#" role="button" >Link로 보내버리는 방법</a>
+		<button class="btn btn-primary" type="submit">Button</button>
+		<input class="btn btn-primary" type="button" value="Input">
+		<input class="btn btn-primary" type="submit" value="Submit">
+		<input class="btn btn-primary" type="reset" value="Reset">
+		
+		
+		<p>아웃라인 버튼  입니다. waring 에 A 태그를 사용햇는데 잘됌 ㅎ</p>
+		
+		<button type="button" class="btn btn-outline-primary">Primary</button>
+		<button type="button" class="btn btn-outline-secondary">Secondary</button>
+		<button type="button" class="btn btn-outline-success">Success</button>
+		<button type="button" class="btn btn-outline-danger">Danger</button>
+		<a href="#" target="_blank">	<button type="button" class="btn btn-outline-warning">Warning</button></a>
+		<button type="button" class="btn btn-outline-info">Info</button>
+		<button type="button" class="btn btn-outline-light text-danger">Light</button>
+		<button type="button" class="btn btn-outline-dark">Dark</button>
+		
+		<p>버튼 사이즈 ?</p>
+		<button type="button" class="btn btn-primary btn-lg">Large button</button>
+		<button type="button" class="btn btn-secondary btn-lg">Large button</button>
+		<button type="button" class="btn btn-primary btn-sm">Small button</button>
+		<button type="button" class="btn btn-secondary btn-sm">Small button</button>
+
+		<p>비활성화 버튼 자바스크립트로 비활성화 기능도 넣어여</p>
+		<button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
+		<button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
+		<a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+		<a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
+
+	
+
+		<p>전체넓이형 block button 그리고 d-md-block 을 이용한  grid 클래스 블록! </p>
+		<div class="d-grid gap-1">
+		  <button class="btn btn-primary" type="button">Button</button>
+		  <button class="btn btn-success" type="button">Button</button>
+		</div>
+		
+		<div class="d-grid gap-4 d-md-block ">
+		  <button class="btn btn-primary" type="button">Button</button>
+		  <button class="btn btn-primary" type="button">Button</button>
+		</div>
+			<p>col 은 버튼 길이 , gap 은 버튼간의 거리 , mx-auto는 가운데정렬?</p>
+		
+		<div class="d-grid gap-1 col-4 mx-auto">
+		  <button class="btn btn-primary" type="button">Button</button>
+		  <button class="btn btn-primary" type="button">Button</button>
+		</div>
+		
+		
+		
+		<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+		  <button class="btn btn-primary me-md-2" type="button">Button</button>
+		  <button class="btn btn-primary" type="button">Button</button>
+		</div>
+		
+			<p>버튼 플러그인으로 상태나 링크전환 시키는거임</p>
+			
+		<button type="button" class="btn btn-primary" data-bs-toggle="button" autocomplete="on">Toggle button</button>
+		<button type="button" class="btn btn-primary active" data-bs-toggle="button" autocomplete="off" aria-pressed="true">Active toggle button</button>
+		<button type="button" class="btn btn-primary" disabled data-bs-toggle="button" autocomplete="off">Disabled toggle button</button>
+				
+		<div class="d-grid gap-1 col-3 mx-auto">
+		<a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">Toggle link</a>
+		<a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Active toggle link</a>
+		<a href="#" class="btn btn-primary disabled" tabindex="-1" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>	
+		</div>
+		
+		
+		
+		
+		<div class="d-grid gap-1 col-4 mx-auto">
+		<h2>button groups</h2>
+		</div>
+		
+	<div class="btn-group" role="group" aria-label="Basic example">
+	  <button type="button" class="btn btn-primary">Left</button>
+	  <button type="button" class="btn btn-primary">Middle</button>
+	  <button type="button" class="btn btn-primary">Right</button>
+	</div>
+	<div class="btn-group">
+	  <a href="#" class="btn btn-primary active" aria-current="page">Active link</a>
+	  <a href="#" class="btn btn-primary">Link</a>
+	  <a href="#" class="btn btn-primary">Link</a>
+	</div>		
+		
+		<h2> Mix Style</h2>
+		<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+		  <button type="button" class="btn btn-danger">Left</button>
+		  <button type="button" class="btn btn-warning">Middle</button>
+		  <button type="button" class="btn btn-success">Right</button>
+		</div>
+		
+		<h2> outline</h2>
+		<div class="btn-group" role="group" aria-label="Basic outlined example">
+	  <button type="button" class="btn btn-outline-primary">Left</button>
+	  <button type="button" class="btn btn-outline-primary">Middle</button>
+	  <button type="button" class="btn btn-outline-primary">Right</button>
+		</div>
+		
+		<h2>check box and radio</h2>
+		<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+		  <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+		  <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+		
+		  <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+		  <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+		
+		  <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+		  <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+		</div>
+		<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+		  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+		  <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
+		
+		  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+		  <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
+		
+		  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+		  <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<body>
+	<table border = "1">
+		<tr>
+			<th colspan = "10"> 한국의차 </th>
+		</tr>
+	
+			<tr>
+			<th rowspan ="7">뿌리차 </th> 
+			</tr>
+			<tr>
+					<td>인삼차</td></tr>  
+			<tr>		
+			<th rowspan ="10">과일차</th></tr>
+					<tr><td>당귀차</td></tr>
+					<tr><td>생강차</td></tr>
+					<tr><td>칡차</td></tr>
+					<tr><td>둥글레차</td></tr>
+				<td>마차</td>
+			</tr>
+			<td>
+			<th rowspan ="9">과일차</th>
+		
+					
+	
+			<th rowspan ="3">곡물차 </th>
+			</tr>
+	
+		
+		
+			
+	</body>

@@ -1,0 +1,42 @@
+<body>
+
+	<table border = "1"> //표의 테두리를 지정하는 속성
+
+		<thead>
+			<tr>
+				<th></th>
+				<th>월</th>
+				<th>화</th>
+				<th>수</th>
+				<th>목</th>
+				<th>금</th>
+				<th>토</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th></th>
+				<th>월</th>
+				<th>화</th>
+				<th>수</th>
+				<th>목</th>
+				<th>금</th>
+				<th>토</th>
+			</tr>
+		<thead>
+			<tr>
+				<th></th>
+				<th>월</th>
+				<th>화</th>
+				<th>수</th>
+				<th>목</th>
+				<th>금</th>
+				<th>토</th>
+			</tr>
+		</tbofy>
+
+	
+	
+	</table>
+
+</body>

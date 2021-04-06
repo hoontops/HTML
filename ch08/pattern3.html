@@ -1,0 +1,74 @@
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <title>패턴 입니다!</title>
+	<style>
+		*{
+		 margin:0px;
+		 padding: 0px;
+		}
+		
+		body{
+		width:960px;
+		margin: 0 auto;
+		overflow:hidden;
+		}
+		
+		#menu{
+		width: 260px;
+		float: right;
+		}
+		
+		#section{
+		width: 700px;
+		float: left;
+		}
+		
+		li{list-style: none;}
+		
+		/*스마트폰 사이즈에서는 전부해제합니다*/
+		/*1은 좌측에 메뉴 2는 우측메뉴ㅜ*/
+		/*3은 바디에서 섹션과 메뉴의 위치가 바뀌므로 섹션이 세로모드에서 상단*/
+		@media screen and (max-width: 767px){
+		body{width:auto}
+		#menu{width: auto; float: none;}
+		#section{width: auto;float: none;}
+		}
+					
+	</style>
+	
+
+
+  </head>
+  <body>
+	<div id="section">
+		<h1>Hello,  media!</h1>
+		<p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
+		<p>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</p>
+	</div>
+	
+	
+	<div id="menu">
+	
+		<ul>
+			<li>A 메뉴</li>
+			<li>B 메뉴</li>
+			<li>C 메뉴</li>
+		</ul>
+	</div>    
+	
+
+
+
+
+
+
+   
+  </body>
+</html>

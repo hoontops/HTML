@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+	<style>
+	.nilogo{
+	position: absolute;
+		top:50px;
+		left:55px;
+	}
+
+	.con {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+       position: absolute;
+	    top : 70px;
+	    left : 250px;
+	}
+	
+	.cell {
+	    float: left;
+	    box-sizing: border-box;
+	    margin-bottom: 20px;
+	    list-style:none;
+	 
+	}
+	.row::after {
+	    content: "";
+	    display: block;
+	    clear: both;
+	}
+	
+	
+	
+	
+	.img-box > img {
+	    display: block;
+	    width: 100%;
+	}
+
+	.con {
+   		 max-width: 1000px;
+	}
+	
+	.logo-bar {
+	    text-align: center;
+	    margin-bottom: 20px;
+	    margin-top: 20px;
+	}
+	
+	.bn-box {
+	    margin-bottom: 20px;
+	    margin-top: 20px;
+	}
+	@media ( max-width:700px ) {
+	    .top-bn-box-1 {
+	        overflow-x:hidden;
+	    }
+	
+	    .top-bn-box-1 > .img-box {
+	        margin-left:-50%;
+	    }
+	}
+	
+	.menu-box {
+	    margin-bottom: 20px;
+	    margin-top: 20px;
+	}
+	.menu-box > ul > li {
+	    width: calc(100% / 4);
+	}
+	@media (max-width: 800px) {
+	    .menu-box {
+	        display: none;
+	    }
+	}
+	
+	.menu-box > ul > li > a {
+	    display: block;
+	    text-align: center;
+	    font-weight: bold;
+	    position: relative;
+	}
+	.menu-box > ul > li:hover > a {
+	    color: red;
+	    text-decoration: underline;
+	}
+	.menu-box > ul > li > a::before,
+	.menu-box > ul > li > a::after {
+	    content: "";
+	    width: 1px;
+	    height: 13px;
+	    background-color: black;
+	    position: absolute;
+	    top: 50%;
+	    transform: translatey(-50%);
+	    left: 0;
+	}
+	.menu-box > ul > li > a::after {
+	    left: auto;
+	    right: 0;
+	}
+	.menu-box > ul > li:first-child > a::before,
+	.menu-box > ul > li:last-child > a::after {
+	    width: 2px;
+	}
+	.list > ul > li {
+	    width: calc(100% / 3);
+	}
+	
+	.list > ul > li {
+	    padding: 0 10px;
+	}
+	.list > ul {
+	    margin: 0 -10px;
+	}
+	
+	.list > ul > li > .product-name {
+	    text-align: Center;
+	    font-weight: bold;
+	}
+	.list > ul > li:hover > .product-name {
+	    text-decoration: underline;
+	}
+	.list > ul > li > .product-price {
+	    text-align: right;
+	    font-size: 1.1rem;
+	}
+	.list > ul > li > .product-price::after {
+	    content: "원";
+	    font-size: 1rem;
+	    font-weight:normal;
+	}
+	
+	.list > ul > li > .product-type{
+	    text-align: center;
+	    font-size:  12px;
+		
+	}
+	
+	.list > ul > li > .product-color{
+	  text-align: center;
+	    font-size:  12px;
+		
+	}
+		
+
+	header{
+		width: 100%;
+		height: 150px;
+		
+		background-repeat: no-repeat;
+	
+	}
+		
+		
+		
+	.ul{
+		float: right;
+		width: 400px;
+		height: 50px;
+		overflow: auto;
+		}
+		.ul .li {
+		float : left;
+		font-size: 13px;
+		width: 32%;
+		height: 100%;
+		line-height: 40px;
+		text-align: center;
+		margin: 0, auto;	
+		}
+	
+		.ula{
+			position:absolute;
+			top: 60px;
+			width: 600px;
+			height: 50px;
+			left: 330px;
+			float:left;
+				
+		}
+	 .lia{
+			
+			float : left;
+			font-size: 17px;
+			width: 20%;
+			height: 100%;
+			line-height: 20px;
+			margin: 0, auto;	
+		
+		}
+	
+		.searchbar{
+			position:absolute;
+			top: 60px;
+			width: 600px;
+			height: 70px;
+			left: 900px;
+			
+		}
+		
+		
+	nav{
+		width: 100%;
+		height: 150px;
+		overflow:hidden;	
+		position:absolute;
+		left: 90px;
+	}
+	
+	.nav1{
+	
+		position:absolute;
+			top: 4px;
+			height:60px;
+			left: 50px;
+	
+	}
+	.nav2{
+		position:absolute;
+			font-size:20px;
+			font :bold;
+			top: 15px;
+			left: 880px;
+	
+
+	}
+	.nav3{
+		position:absolute;
+			font-size:20px;
+			font :bold;
+			top: 15px;
+			left: 980px;
+	
+
+	}
+	
+	
+	aside{
+		overflow:hidden;
+		width: 250px;
+		height: 1000px;
+		position: absolute;
+		left: 0;
+		top:270px;
+		
+	}
+	
+	aside>ul{
+
+
+		list-style: none;
+		text-align: center;
+
+
+	}
+	
+
+	aside>ul>li{
+	
+	font-size: 17px;
+	text-align: center;
+	margin-top: 10px;
+	font-weight: bold;
+	
+	}
+	
+	.ul2{
+	
+		text-align: left;
+		font-family:  fantasy;
+		margin-top: 20px;
+	
+	}
+
+		main{
+		
+		position: absolute;
+		top:280px;
+		width: 1500px;
+						
+		}
+
+
+
+		main>ul{
+		
+			position: absolute;
+			left:250px;
+			margin: 0 auto;
+			list-style:none;
+		}
+		main>ul>li{
+			font-size:13px;
+			margin:10px;
+			float: left;
+			list-style: "\2225";
+		}
+		
+		main>table{
+			position: absolute;
+			left : 400px;
+			font-size: 12px
+			
+		}
+		
+		search-icon{
+		font-size: 5px;
+		}
+
+
+	.sprite{
+	display: inline-block;
+	overflow:hidden;
+	}
+	
+	.sprite-flags{
+	background-image: url("resource/img/flags.png");
+	width :16px;
+	height: 11px;
+	background-position: -60px -480px;
+	background-size: 76px 711px;
+	}
+	.sprite-flags-kor{
+	
+	background-position: -60px -60px
+	}
+	
+	
+	</style>
+
+
+
+</head>
+
+
+
+<body>
+	<header>
+		
+		<img src="https://static-breeze.nike.co.kr/kr/ko_kr//cmsstatic/structured-content/2357/jd_logo.jpg" width="35px" name="top_jordan">	
+	
+	
+	
+	<div class="ul">
+			<div class="ul li"><a href="#" style="text-decoration: none;">고객센터</a></div>
+			<div class="ul li"><a href="#" style="text-decoration: none;">멤버 가입</a></div>
+			<div class="ul li"><a href="#" style="text-decoration: none;">로그인</a></div>
+			
+	</div>
+	<div class="nilogo">	
+	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJcAAAA2CAMAAAD9AfsAAAAAY1BMVEX///8AAADt7e36+vrz8/Pp6enm5uZFRUU6Ojq4uLjPz8+Li4uoqKje3t4ZGRmEhIQvLy9xcXF3d3fY2NgeHh5mZmafn5/AwMBUVFQlJSURERGurq6ZmZmRkZFdXV0qKipMTEyHLsyAAAACzklEQVRogcWZa7eqIBBAG0QR1FATX6j1/3/lNc+tc1IUxEf7YwtoL5iBAS8XJY7652+Di6/++21mWrD42ny5LOd07t87earLG5YncVLMzklK8Jk2A9grRAVxgOabtBCe5zOAaFsCwIMuzYeE7MTocjALyL2XqpJo8W8LAH6aFJPJ0wnAz73lplEGEJ3ihEJBroMUPApdQLsVQHd81N9oEMN/Ks607XHXN8wPlip4+ZaCu24BB5K+Za3Xt8ZjOYE/JNSom3y2jY9aRjdPPqSAM7PEL4bW5QFKOKIJfFIab5LOT8qmu0tJ3mUjK6HNwF8t8dNlz7B3PMbvMMZv3RVjyP+99juzWZNUEynwqUkGvvFe/XYpvVAku3rqBJVYm+3i1dUsdZeIJCcKJ4Brc1s7lnx3brYoOYilr9NlRE3k+h0I/wZCYi2FilwolZ6kVvER/A5ArJycqC19VUQN9PWeVe0U/dlfstUxgBlN4zmlHiFtC7rg7zDrAgzT5KEOqJfV3O1Gj/cxUGa8v0RFuzRPPWWzULBraT8HM4t8FnQaqb7e22J1wePTq9V08JgsNUp9rPPVgTpCjoesl85IL0/Vu+YHWbi5GnfGJUhPqowxHBWKtlNqscdh5o2XcViFyeaMadstJt6bdp+Kt5gZXtDIcxFCrhexUEzLFTU2p42ahaWpY0JIPLuNT+nM6z0tqmW0Iubujjd1Zyerh1xThephe0hdu9ve1yi63SpuD3g6CLda+XLTaTNHvknqalfvGbBlvurmuLcf+/gShz7D3iytUsPXBWtspEhz/COZvpQaUxb7bqFq5s7tGeL0lHfO/tpnUOa9ucuTrC4rMjIrj471T1Ijq6rdWrCvZXjuXaYm4fkfZy5II1bxL334Q/MPHlCX9JCD2Qyqzkqff1PqCaKT6/OjYWdsoFpQGCQl8X1SCt6GZ2ffMtj1+tvZ17+7/wOWkiDRPO4URQAAAABJRU5ErkJggg==" width="50px">	
+	</div>
+	<div class="ula">
+		<div class="lia">New Releases</div>
+		<div class="lia">Men</div>
+		<div class="lia">Women</div>
+	
+		<div class="lia">Kids</div>
+		<div class="lia">Sale</div>
+	</div>
+		
+		<div class="searchbar"><input type="search" title="검색" width="120px" height="100px" autofocus="autofocus" placeholder="검색">
+		</div>
+
+	</header>
+	<nav>
+		<div class="nav1"><a href ="#" style="text-decoration: none;"> Men / 신발</a></div>
+		<h1> Men's Running</h1>
+		<div class="nav2"><input type="submit" name="filter">Filter </div>
+		<div class="nav3"><input type="submit" name="filter">신상품순 </div>
+		
+	</nav>
+	<aside>
+		<ul>
+				<li>신발전체</li>
+				<li>라이프스타일</li>
+				<li>러닝</li>
+				<li>트레이닝 - 짐</li>
+				<li>농구</li>
+				<li>조던</li>
+				<li>축구</li>
+				<li>스케이트보딩</li>
+				<li>골프</li>
+				<li>테니스</li>
+				<li>센들 - 슬리퍼</li>
+		</ul>
+		
+		<ul>
+		<li><div class="ul2">의류 전체</div></li>
+		<li><div class="ul2">아우터웨어</div></li>
+		<li><div class="ul2">후디 - 크루</div></li>
+		<li><div class="ul2">팬츠 - 타이츠</div></li>
+		<li><div class="ul2">숏팬츠</div></li>
+		<li><div class="ul2">나이키 프로</div></li>
+		<li><div class="ul2">양말</div></li>
+		<li><div class="ul2">셋업</div></li>
+		
+		</ul>
+
+	</aside>
+	
+	<main>
+			<table>
+				<tr>
+				<td>전체보기 ｜</td>
+				<td>줌 ｜</td>
+				<td>리액트 ｜</td>
+				<td>프리 ｜</td>
+				<td>조이라이드 ｜</td>
+				<td>러닝화가이드</td>
+				</tr>			
+			</table>	
+			
+	<div class="list con">
+    <ul class="row">
+        <li class="cell">
+            <div class="img-box"><img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CT2357-003/2175dd0e-cf25-4ada-89e6-a45e3578e5e9_primary.jpg?browse" alt=""></div>
+            <div class="product-name">이걸하네</div>
+            <div class="product-price">나이키 이제안삼</div>
+            <div class="product-type">남성전용</div>
+            <div class= "product-color">색상 총6종</div>
+        </li>
+        <li class="cell">
+            <div class="img-box"><img src="D:\factory\down\2.jpg" alt=""></div>
+        </li>
+        <li class="cell">
+            <div class="img-box"><img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CT2357-002/f156a607-e66c-477c-9350-7f0e5decb7f7_primary.jpg?browse" alt=""></div>
+            <div class="product-name">패가망한</div>
+            <div class="product-price">198000</div>
+            <div class="product-type">남성전용</div>
+            <div class= "product-color">색상 총6종</div>
+        </li>
+      </ul>
+      <ul class="row">
+         <li class="cell">
+            <div class="img-box"><img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/BQ9646-011/777b71bc-e8a3-46e9-a1d1-3c38c107c1bf_primary.jpg?browse" alt=""></div>
+            <div class="product-name">페가수스</div>
+            <div class="product-price">198030</div>
+            <div class="product-type">남성전용</div>
+            <div class= "product-color">6종</div>
+            
+        </li>
+        <li class="cell">
+            <div class="img-box"><img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CU1855-200/7c461d35-26ec-4008-86fa-351ccd6f86bd_primary.jpg?browse" alt=""></div>
+            <div class="product-name">패가섯으</div>
+            <div class="product-price">198200</div>
+          	<div class="product-type">남성전용</div>
+            <div class= "product-color">6종</div>
+        </li>
+        <li class="cell">
+            <div class="img-box"><img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CT2357-001/2fc052fb-18ce-4b77-ad53-62d2223fb339_primary.jpg?browse"" alt=""></div>
+            <div class="product-name">패버리겟스</div>
+            <div class="product-price">198100</div>
+	        <div class="product-type">남성전용</div>
+            <div class= "product-color">6종</div>
+        </li>
+        <li class="cell">
+            <div class="img-box"><img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CT2357-100/b4268ecb-bd76-4bb0-831f-cf3de24d03c4_primary.jpg?browse" alt=""></div>
+            <div class="product-name">1s</div>
+            <div class="product-price">19800</div>
+		    <div class="product-type">남성전용</div>
+            <div class= "product-color">색상 총6종</div>
+        </li>
+        <li class="cell">
+            <div class="img-box"><img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CT2357-600/95d7cf54-f75a-46de-a762-98856c1c566a_primary.jpg?browse" alt=""></div>
+            <div class="product-name">단가2s</div>
+            <div class="product-price">19800</div>
+		    <div class="product-type">남성전용</div>
+            <div class= "product-color">색상 총6종</div>
+        </li>
+        <li class="cell">
+            <div class="img-box"><img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/CT2357-001/2fc052fb-18ce-4b77-ad53-62d2223fb339_primary.jpg?browse" alt=""></div>
+            <div class="product-name">2</div>
+            <div class="product-price">19800</div>
+
+		    <div class="product-type">남성전용</div>
+            <div class= "product-color">색상 총6종</div>
+        </li>
+        <li class="cell">
+            <div class="img-box"><img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/AO4568-103/b5c9171d-6284-4877-91fc-87b0e4490b98_primary.jpg?browse" alt=""></div>
+            <div class="product-name">단21s</div>
+            <div class="product-price">29800</div>
+		    <div class="product-type">남성전용</div>
+            <div class= "product-color">색상 총6종</div>
+
+        </li>
+        <li class="cell">
+            <div class="img-box"><img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/AT8240-104/5dc3c25c-ccbc-41dc-94a1-ae75c34a0c7a_primary.jpg?browse" alt=""></div>
+            <div class="product-name">8879</div>
+            <div class="product-price">19800</div>
+		    <div class="product-type">남성전용</div>
+            <div class= "product-color">색상 총6종</div>
+
+        </li>
+        <li class="cell">
+            <div class="img-box"><img src="https://static-breeze.nike.co.kr/kr/ko_kr/cmsstatic/product/BQ9646-102/d9714ad3-07b1-400f-8752-89c233599782_primary.jpg?browse" alt=""></div>
+            <div class="product-name">22s</div>
+            <div class="product-price">19800</div>
+		    <div class="product-type">남성전용</div>
+            <div class= "product-color">색상 총6종</div>
+
+        </li>
+    
+    </ul>
+</div>
+					
+		
+			
+	</main>
+
+
+</body>
+
+
+
+
+</html>

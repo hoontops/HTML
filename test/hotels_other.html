@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 작성자:ExtremeCode -->
+<!-- Hetel Copy Html / CSS -->
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국내 펜션 특가</title>
+    <link href="https://a.cdn-hotels.com/uswest2/da/assets/s/63.0.10610/images/brands/hcom/favicon.ico"
+        rel="shortcut icon">
+    <link rel="stylesheet" href="./resource/css/reset.css">
+    <style>
+        #page-wrapper {
+            font-size: 10px;
+        }
+
+        #banner {
+            height: 60px;
+        }
+
+        /* div {
+            border: 1px solid black;
+        } */
+
+        .banner-nav {
+            height: 50px;
+            background-color: #d32f2f;
+            overflow: hidden;
+        }
+
+        .banner-nav2 {
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .flex-container {
+            display: flex;
+            height: 40px;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .flex2-container {
+            display: flex;
+            height: 20px;
+            flex-direction: row;
+            justify-content: space-between;
+            overflow: hidden;
+            font-size: 15px;
+        }
+
+        .banner-nav #logo img {
+            width: auto;
+            height: auto;
+            max-width: 150px;
+            max-height: 50px;
+            padding-top: 5px;
+        }
+
+        .banner-nav .nav-left {
+            margin: 0 0 0 100px;
+            flex-grow: 1;
+        }
+
+        .banner-nav .nav-right {
+            margin: 0 100px;
+        }
+
+        .context-selector>div {
+            /* display: inline-flex; */
+            display: inline-block;
+            margin-left: 0px;
+            border: 0;
+
+        }
+
+        .nav-left .toggle-selecter {
+            padding: 7px;
+            border: 0;
+            border-radius: 4px;
+            color: #ffffff;
+            background-color: #d32f2f;
+            font-size: 8px;
+            line-height: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        .nav-right .toggle-selecter {
+            padding: 20px 10px 20px 10px;
+            color: #ffffff;
+            background-color: #d32f2f;
+            font-size: 8px;
+            line-height: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            box-sizing: border-box;
+
+        }
+
+        .toggle-selecter:hover {
+            color: #d32f2f;
+            background-color: #ffffff;
+        }
+
+        .nav-right #signin {
+            color: #ffffff;
+            background-color: #9c0c1e;
+        }
+
+        .nav-right #signin:hover {
+            color: #9c0c1e;
+            background-color: #ffffff;
+        }
+
+        .sprite {
+            display: inline-block;
+            transform: scale(1.5);
+            overflow: hidden;
+        }
+
+        .sprite-flags {
+            background-image: url(resource/img/flags.png);
+            background-size: 76px 711px;
+            width: 16px;
+            height: 11px;
+        }
+
+        .sprite-flags-kor {
+            background-position: -60px -60px;
+        }
+
+        .text-menu {
+            font-size: 1.0em;
+        }
+
+        .toggle {
+            font-weight: bold;
+            padding-left: 5px;
+            font-size: 1.2em;
+        }
+
+        .text-currencys:after {
+            content: "ENG";
+        }
+
+        .text-currency-kor:after {
+            content: "KRW";
+        }
+
+        .text-help {
+            content: "HELP";
+        }
+
+        .text-help-kor:after {
+            content: "도움말";
+        }
+
+        .toggle-selecter>.help-toggle:after {
+            content: "∨";
+        }
+
+        .toggle-selecter:hover>.help-toggle:after {
+            content: "∧";
+        }
+
+
+        .text-yourbookings:after {
+            content: "Your bookings";
+        }
+
+        .text-yourbooking-kor:after {
+            content: "내 예약 정보";
+        }
+
+        /* Create account / Sign in */
+
+        .text-createaccounts:after {
+            content: "Create Account";
+        }
+
+        .text-createaccount-kor:after {
+            content: "회원가입";
+        }
+
+        .text-signins:after {
+            content: "Sign in";
+        }
+
+        .text-signin-kor:after {
+            content: "로그인";
+        }
+
+        .nav2-left ul {
+            margin-left: 100px;
+        }
+
+        .nav2-left ul li {
+            display: inline;
+            margin-left: 10px;
+        }
+
+        .nav2-left ul li a {
+            font-size: 10px;
+        }
+
+        .nav2-left ul li a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .header-image {
+            background-image: url('resource/img/header-img.png');
+            height: auto;
+            width: 100%;
+            min-height: auto;
+            background-repeat: no-repeat;
+            margin-left: auto;
+            margin-right: auto;
+            background-size: 100% 100%;
+            background-position: center;
+        }
+
+        #content {
+            height: 70%;
+        }
+
+        .content-margin {
+            height: 100%;
+            margin: 0 100px 0 100px;
+        }
+
+        .article-header-row {
+            min-height: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .article-header-nav span {
+            color: white;
+        }
+
+        .article-header-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .article-header-nav ul li {
+            display: inline-block;
+        }
+
+        .article-header-nav ul li:nth-of-type(n+2):before {
+            content: ">";
+        }
+
+        input[type=text] {
+            font-size: 10px;
+            box-sizing: border-box;
+            padding: 1px 5px;
+            margin: 2px 0;
+            border-radius: 4px;
+        }
+
+        .article-header-row .article-header-title h1 {
+            color: white;
+            line-height: 20px;
+            margin-top: 16px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 24px;
+            text-shadow: 1px -3px 7px rgba(0, 0, 0, 0.8);
+        }
+
+        .article-header-row .article-header-title p {
+            color: white;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            text-shadow: 1px -3px 7px rgba(0, 0, 0, 0.8);
+        }
+
+        .article-header-row .article-header-widget {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            min-height: auto;
+            width: 100%;
+            padding: 5px 10px 10px 5px;
+            background-color: #f1f1f1;
+            border-radius: 4px;
+            border: 1px solid black;
+        }
+
+        .article-header-widget .item1 input {
+            width: 250px;
+        }
+
+        #search {
+            padding: 10px;
+        }
+
+        .grid-container form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* grid-template-columns: auto auto auto auto auto auto auto auto; */
+            /* grid-gap: 10px; */
+        }
+
+        /* @media only screen and (max-width: 950px) {
+            .grid-container form {
+                grid-template-columns: auto auto auto auto auto;
+            }
+        } */
+        input[type=text] {
+            border-radius: 2px;
+            border: 1px solid gray;
+        }
+
+        .check-in input[type=text],
+        .check-out input[type=text] {
+            background-image: url('resource/img/calendar.png');
+            background-position: 95% 1px;
+
+            background-size: auto 80%;
+            background-repeat: no-repeat;
+        }
+
+        .num-nights {
+            background-image: url('resource/img/bag.png');
+            min-width: 30px;
+            background-position: 50% -5px;
+            background-size: auto 120%;
+            background-repeat: no-repeat;
+            text-align: center;
+            line-height: 4;
+
+        }
+
+        .num-nights span {
+            color: white;
+            vertical-align: middle;
+        }
+
+        .num-nights-tag {
+            float: right;
+        }
+
+        .select-menu select {
+            border: none;
+            border-radius: 2px;
+        }
+
+        .white-space-nowrap {
+            white-space: nowrap;
+        }
+
+        .label-block {
+            display: block;
+        }
+
+        .font-bold {
+            font-weight: bold;
+        }
+
+        #search button {
+            outline: none;
+            background-color: #156bc1;
+            border: none;
+            border-radius: 2px;
+            box-shadow: inset 0 -2px 0 #063665;
+            padding: 3px 10px 3px 10px;
+            color: #fff;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        #search button:hover {
+            background-color: #063665;
+        }
+
+        .adults {
+            text-align: right;
+        }
+
+        .children {
+            text-align: right;
+        }
+
+        .article-message {
+            text-align: center;
+        }
+
+        .message-border {
+            border: 1px solid gray;
+            margin: 10px 0 10px 0;
+            padding: 10px;
+        }
+
+
+        .article-message ul li {
+            display: inline;
+            margin-left: 10px;
+        }
+
+        .article-message ul li:nth-of-type(-n+2):before {
+            content: "\2705";
+        }
+
+        .article-message ul li:nth-of-type(3):before {
+            content: "\1F499";
+        }
+
+        .article-message ul li:nth-child(1) span:nth-child(1) {
+            border-bottom: 1px dashed #999;
+        }
+
+        .article-message ul li span:nth-of-type(2) {
+            font-weight: bold;
+            color: green;
+        }
+
+        .article-message ul li:nth-of-type(3) {
+            font-weight: bold;
+            color: blue;
+        }
+
+        .section-anchors {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .section-anchors ul li {
+            display: inline;
+            margin-left: 10px;
+
+            color: blue;
+            border: 1px solid lightgray;
+            background: lightgray;
+            border-radius: 10px;
+            padding: 2px 10px 2px 10px;
+        }
+
+        .section-anchors ul li:hover {
+            text-decoration: underline;
+        }
+
+        .deal-section {
+            height: auto;
+            background-color: #f5f4f0;
+
+        }
+
+        .deal-header,
+        .deal-footer {
+            height: 30px;
+            line-height: 40px;
+            padding: 10px;
+        }
+
+        .deal-header h4 {
+            display: inline;
+            font-size: 2em;
+        }
+
+        .deal-header a,
+        .deal-footer a {
+            float: right;
+            line-height: 30px;
+            border-radius: 2px;
+            font-size: 1em;
+            outline: none;
+            background-color: #156bc1;
+            border: none;
+            box-shadow: inset 0 -2px 0 #063665;
+            padding: 1px 10px 1px 10px;
+            margin: 5px 0;
+            color: #fff;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .deal-header a:hover,
+        .deal-footer a:hover {
+            background-color: #063665;
+        }
+
+        .deal-cards {
+            display: grid;
+            margin: 30px 20px;
+            grid-gap: 10px;
+            grid-template-columns: auto auto auto auto;
+            justify-content: space-between;
+        }
+
+        .deal-cards .deal-card {
+            height: 250px;
+            min-height: 250px;
+            background-color: #fff;
+            text-align: center;
+            padding: 5px;
+            box-shadow: inset 0 -2px 0 gray;
+            border-radius: 3px;
+            position: relative;
+        }
+
+        .deal-cards .deal-card:hover {
+            border: 2px solid blue;
+        }
+
+        .card-content {
+            text-align: left;
+            clear: both;
+            font-weight: bold;
+            line-height: 15px;
+        }
+
+        .card-content h5 {
+            font-size: 1.1em;
+        }
+
+        .card-content div {
+            font-size: 1.2em;
+            color: green;
+        }
+
+        .botton-content {
+            position: absolute;
+            bottom: 0;
+            border-radius: 2px;
+            border: 1px solid blue;
+            padding: 5px 10px 5px 10px;
+            font-weight: bold;
+            color: blue;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .botton-content:hover {
+            color: white;
+            background-color: blue;
+        }
+
+        .deal-cards>div>img {
+            min-height: 40%;
+            max-height: 50%;
+            min-width: 90%;
+            max-width: 100%;
+            object-fit: fill;
+        }
+
+        .deal-cards>div:nth-of-type(1)>img {
+            content: url('resource/img/card-1.png');
+        }
+
+        .deal-cards>div:nth-of-type(2)>img {
+            content: url('resource/img/card-2.png');
+        }
+
+        .deal-cards>div:nth-of-type(3)>img {
+            content: url('resource/img/card-3.png');
+        }
+
+
+        .deal-cards>div:nth-of-type(4)>img {
+            content: url('resource/img/card-4.png');
+        }
+
+
+        .deal-cards>div:nth-of-type(5)>img {
+            content: url('resource/img/card-5.png');
+        }
+
+        .deal-cards2>div:nth-of-type(1)>img {
+            content: url('resource/img/card-6.png');
+        }
+
+        .deal-cards2>div:nth-of-type(2)>img {
+            content: url('resource/img/card-7.png');
+        }
+
+        .deal-cards2>div:nth-of-type(3)>img {
+            content: url('resource/img/card-1.png');
+        }
+
+
+        .deal-cards2>div:nth-of-type(4)>img {
+            content: url('resource/img/card-2.png');
+        }
+
+        .deal-section {
+
+            border-bottom: 2px solid lightgray;
+        }
+
+        footer {
+            margin: 10px;
+            padding: 10px 0 10px 0;
+            font-size: 10px;
+        }
+
+        footer span {
+            display: inline-block;
+            max-width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <!-- banner header -->
+        <header class="desktop">
+            <div id="banner">
+                <div class="banner-nav flex-container flex-width">
+                    <!-- nav 왼쪽 -->
+                    <nav class="nav-left flex-container">
+                        <div id="logo">
+                            <a href="1_hotel_copy.html">
+                                <img src="./resource/img/logo.png" class="logo" alt="1_hotol_copy.html로 이동" width="234">
+                            </a>
+                        </div>
+                        <div class="context-selector">
+                            <div>
+                                <div class="pos-selector">
+                                    <!-- 글로벌 메뉴 -->
+                                    <a href="#" id="pos" class="toggle-selecter" role="button">
+                                        <span class="sprite sprite-flags sprite-flags-kor"></span>
+                                        <span class="toggle">∨</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="currency-selector">
+                                    <!-- 통화 메뉴 -->
+                                    <a href="#" id="currency" class="toggle-selecter" role="button">
+                                        <span class="text-menu text-currencys text-currency-kor"></span>
+                                        <span class="text-menu toggle">∨</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- nav 오른쪽 -->
+                    <nav class="nav-right flex-container">
+                        <div class="context-selector">
+                            <div>
+                                <div class="help-selector">
+                                    <!-- 헬프 메뉴 -->
+                                    <a href="#" id="help" class="toggle-selecter" role="button">
+                                        <span class="text-menu text-helps text-help-kor"></span>
+                                        <span class="text-menu toggle help-toggle"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="yourbookings-selector">
+                                    <!-- 헬프 메뉴 -->
+                                    <a href="#" id="yourbooking" class="toggle-selecter" role="button">
+                                        <span class="text-menu text-yourbookings text-yourbooking-kor"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="createaccount-selector">
+                                    <!-- 헬프 메뉴 -->
+                                    <a href="#" id="createaccount" class="toggle-selecter" role="button">
+                                        <span class="text-menu text-createaccounts text-createaccount-kor"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="signin-selector">
+                                    <!-- 로그인 메뉴 -->
+                                    <a href="#" id="signin" class="toggle-selecter" role="button">
+                                        <span class="text-menu text-signins text-signin-kor"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="banner-nav2 flex2-container flex-width">
+                    <!-- nav2 -->
+                    <nav class="nav2-left">
+                        <ul>
+                            <li><a href="#">특가 상품</a></li>
+                            <li><a href="#">사이트 이용 안내</a></li>
+                            <li><a href="#">숙박 시설 등록하기</a></li>
+                            <li><a href="#">Hotels.com™ 호텔스닷컴 리워드</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- content -->
+        <div id="content">
+            <section id="main-section">
+                <!-- 3개의 article로 묶을것임 -->
+                <article>
+                    <div class="article-header">
+                        <div class="header-image">
+                            <div class="content-margin">
+                                <div class="article-header-row">
+                                    <div class="article-header-nav">
+                                        <ul>
+                                            <li><a href="#"><span>호텔</span></a></li>
+                                            <li><a href="#"><span>특가 상품</span></a></li>
+                                            <li><span>국내 펜션 특가</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="article-header-row">
+                                    <div class="article-header-title">
+                                        <h1>국내 펜션 특가</h1>
+                                        <p>지금 예약하세요!</p>
+                                    </div>
+                                </div>
+                                <div class="article-header-row">
+                                    <div class="article-header-widget grid-container white-space-nowrap">
+                                        <form action="" role="search" autocomplete="off">
+                                            <div class="item1">
+                                                <label for="destination" class="label-block font-bold">
+                                                    목적지 또는 숙박 시설을 입력하세요.
+                                                </label>
+                                                <span>
+                                                    <input type="text" id="dextination">
+                                                </span>
+                                            </div>
+                                            <div class="check-in item2">
+                                                <label for="check-in" class="label-block font-bold">
+                                                    체크인
+                                                </label>
+                                                <span>
+                                                    <input type="text" value="2021/01/24" placeholder="yyyy.mm.dd">
+                                                </span>
+                                                <label for="check-in" class="label-block">
+                                                    일요일
+                                                </label>
+                                            </div>
+                                            <div class="check-out item3">
+                                                <label for="check-out" class="label-block font-bold">
+                                                    체크아웃
+                                                </label>
+                                                <span>
+                                                    <input type="text" value="2021/01/25" placeholder="yyyy.mm.dd">
+                                                </span>
+                                                <label for="check-out" class="label-block">
+                                                    월요일
+                                                </label>
+                                            </div>
+                                            <div>
+                                                <div class="item4 num-nights label-block">
+                                                    <span class="font-bold">
+                                                        1
+                                                    </span>
+                                                </div>
+                                                <span class="num-nights-tag label-block">
+                                                    박
+                                                </span>
+                                            </div>
+                                            <div class="select-menu item5">
+                                                <label for="rooms" class="label-block font-bold">
+                                                    객실
+                                                </label>
+                                                <span>
+                                                    <select name="객실" id="rooms">
+                                                        <option value="1" selected>1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9+">9+</option>
+                                                    </select>
+                                                </span>
+                                            </div>
+                                            <div class="select-menu adults item6">
+                                                <label for="adults" class="label-block font-bold">
+                                                    성인
+                                                </label>
+                                                <span>
+                                                    <select name="성인" id="adults">
+                                                        <option value="1">1</option>
+                                                        <option value="2" selected>2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9+">9+</option>
+                                                    </select>
+                                                </span>
+                                                <label for="adults" class="label-block">
+                                                    만 18세 이상
+                                                </label>
+                                            </div>
+                                            <div class="select-menu children item7">
+                                                <label for="children" class="label-block font-bold">
+                                                    아동
+                                                </label>
+                                                <span>
+                                                    <select name="아동" id="children">
+                                                        <option value="0" selected>0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9+">9+</option>
+                                                    </select>
+                                                </span>
+                                                <label for="children" class="label-block">
+                                                    만 17세 이하
+                                                </label>
+                                            </div>
+                                            <div id="search" class="item8">
+                                                <button type="submit" name="search" class="font-bold">검색</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="article-message">
+                        <div class="content-margin">
+                            <div class="message-border">
+                                <ul>
+                                    <li><span>대부분의 호텔</span> <span>무료 취소</span></li>
+                                    <li><span>대부분의 객실</span> <span>지금 결제 또는 현장 결제 옵션</span></li>
+                                    <li>가격 보장</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="article-container">
+                        <div class="content-margin">
+                            <div class="section-anchors">
+                                <ul>
+                                    <li><a href="#jeju">제주시</a></li>
+                                    <li><a href="#seogwipo">서귀포</a></li>
+                                    <li><a href="">강릉</a></li>
+                                    <li><a href="">여수</a></li>
+                                    <li><a href="">경주</a></li>
+                                    <li><a href="">평창</a></li>
+                                    <li><a href="">양양</a></li>
+                                    <li><a href="">거제</a></li>
+                                    <li><a href="">가평</a></li>
+                                    <li><a href="">남해</a></li>
+                                    <li><a href="">통영</a></li>
+                                    <li><a href="">태안</a></li>
+                                </ul>
+                            </div>
+                            <div class="deal-section">
+                                <div class="deal-section-header deal-header">
+                                    <h4 id="jeju">제주시</h4>
+                                    <a href="">특가 상품 모두 보기</a>
+                                </div>
+                                <div class="deal-card-section">
+                                    <div class="deal-cards">
+                                        <div class="deal-card">
+                                            <img src="" alt="card-1">
+                                            <div class="card-content">
+                                                <h5>반하크라펜션</h5>
+                                                <span>3.5성급</span>
+                                                <div>
+                                                    <span>훌륭함 8.8 / 10</span>
+                                                </div>
+                                            </div>
+                                            <div class="botton-content" role="button">
+                                                <div class="price-view">
+                                                    가격 보기
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="deal-card">
+                                            <img src="" alt="card-2">
+                                            <div class="card-content">
+                                                <h5>송당송당 펜션앤리조트</h5>
+                                                <span>3성급</span>
+                                                <div>
+                                                    <span>매우 좋음 8.0 / 10</span>
+                                                </div>
+                                            </div>
+                                            <div class="botton-content" role="button">
+                                                <div class="price-view">
+                                                    가격 보기
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="deal-card">
+                                            <img src="" alt="card-3">
+                                            <div class="card-content">
+                                                <h5>허브인휴양펜션</h5>
+                                                <span>2.5성급</span>
+                                                <div>
+                                                    <span>좋음 7.6 / 10</span>
+                                                </div>
+                                            </div>
+                                            <div class="botton-content" role="button">
+                                                <div class="price-view">
+                                                    가격 보기
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="deal-card">
+                                            <img src="" alt="card-4">
+                                            <div class="card-content">
+                                                <h5>뷰티워 리조트</h5>
+                                                <span>3성급</span>
+                                                <div>
+                                                    <span>좋음 7.4 / 10</span>
+                                                </div>
+                                            </div>
+                                            <div class="botton-content" role="button">
+                                                <div class="price-view">
+                                                    가격 보기
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="deal-card">
+                                            <img src="" alt="card-5">
+                                            <div class="card-content">
+                                                <h5>해변풍경펜션</h5>
+                                                <span>3성급</span>
+                                                <div>
+                                                    <span>좋음 7.0 / 10</span>
+                                                </div>
+                                            </div>
+                                            <div class="botton-content" role="button">
+                                                <div class="price-view">
+                                                    가격 보기
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="deal-section-footer deal-footer">
+                                    <a href="">특가 상품 모두 보기</a>
+                                </div>
+                            </div>
+                            <div class="deal-section">
+                                <div class="deal-section-header deal-header">
+                                    <h4 id="seogwipo">서귀포</h4>
+                                    <a href="">특가 상품 모두 보기</a>
+                                </div>
+                                <div class="deal-card-section">
+                                    <div class="deal-cards deal-cards2">
+                                        <div class="deal-card">
+                                            <img src="" alt="card-1">
+                                            <div class="card-content">
+                                                <h5>제주 봄 스테이</h5>
+                                                <span>3.5성급</span>
+                                                <div>
+                                                    <span>매우 훌륭함 9.2 / 10</span>
+                                                </div>
+                                            </div>
+                                            <div class="botton-content" role="button">
+                                                <div class="price-view">
+                                                    가격 보기
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="deal-card">
+                                            <img src="" alt="card-2">
+                                            <div class="card-content">
+                                                <h5>보우힐</h5>
+                                                <span>3성급</span>
+                                                <div>
+                                                    <span>최고 좋음 9.4 / 10</span>
+                                                </div>
+                                            </div>
+                                            <div class="botton-content" role="button">
+                                                <div class="price-view">
+                                                    가격 보기
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="deal-card">
+                                            <img src="" alt="card-3">
+                                            <div class="card-content">
+                                                <h5>미소가 펜션</h5>
+                                                <span>3성급</span>
+                                                <div>
+                                                    <span>매우 좋음 8.2 / 10</span>
+                                                </div>
+                                            </div>
+                                            <div class="botton-content" role="button">
+                                                <div class="price-view">
+                                                    가격 보기
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="deal-card">
+                                            <img src="" alt="card-4">
+                                            <div class="card-content">
+                                                <h5>리벤더스</h5>
+                                                <span>3성급</span>
+                                                <div>
+                                                    <span>좋음 7.6 / 10</span>
+                                                </div>
+                                            </div>
+                                            <div class="botton-content" role="button">
+                                                <div class="price-view">
+                                                    가격 보기
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="deal-section-footer deal-footer">
+                                    <a href="">특가 상품 모두 보기</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </article>
+            </section>
+        </div>
+        <!-- footer -->
+        <footer id="footer">
+            <div class="content-margin">
+                <div class="copyright">
+                    <span>
+                        * 일부 호텔은 체크인 24시간 이상 전에 취소해야 합니다. 자세한 내용은 사이트에서 확인해 주세요.
+                        <br>
+                        * 리워드 1박의 금액은 적립하신 스탬프 10개의 평균 요금입니다. 세금 및 서비스 요금이 포함되지 않습니다. 사용하시는 각 리워드 숙박에 대해 ₩5,500의 수수료가
+                        적용되지만 앱에서 사용 시 수수료가 없습니다. 제외 사항이 적용됩니다.이용약관 보기리워드 숙박에 도달하는 데 걸리는 평균 시간에 대한 참조는 2018년 1월 1일 ~
+                        2019년 12월 31일에 10번째 스탬프에 도달한 회원 고객의 데이터를 기반으로 합니다. 추가 혜택은 다를 수 있으며 VIP Access 숙박 시설에서만 이용 가능할 수
+                        있습니다. 가격 보장 플러스는 패키지에 적용되지 않으며(판매되는 경우) Hotels.com에서 객실을 결제하고 체크인 시까지 Hotels.com 또는 다른 웹사이트에서
+                        동일한 객실과 동일한 일정에 대해 더 저렴한 요금을 발견하신 경우 이용하실 수 있습니다. 더 저렴한 요금을 Hotels.com에서 찾으신 경우 결제된 요금이 환불되며, 더
+                        저렴한 요금을 다른 웹사이트에서 발견하신 경우에는 차액을 환불해 드립니다.
+                        <br>
+                        © 2021 Hotels.com은 Expedia Group 계열사입니다. All rights reserved.
+                        <br>
+                        Hotels.com 및 Hotels.com 로고는 미국 및/또는 다른 국가에서 Hotels.com, LP의 상표 또는 등록 상표입니다. 기타 모든 상표는 해당 소유권자의
+                        자산입니다.
+                        <br>
+                        서울시 종로구 종로5길 Tower8 9층, Tel: 02-3480-0145, Mail: CS@koreasupport.hotels.com
+                        <br>
+                        트래블 파트너 익스체인지 코리아 주식회사 | 사업자등록번호 821-88-01025 | 대표이사: 김상범
+                        <br>
+                        (주) 호텔스닷컴코리아 |사업자등록번호 : 717-81-00091ㅣ사업자정보확인ㅣ통신판매업신고번호 : 2015-서울종로-1067호
+                        <br>
+                        이 웹사이트에서 진행하신 예약과 관련한 문의사항은 [고객서비스 02-3480-0145]로 연락 주시기 바랍니다.
+                        <br>
+                        호텔스닷컴 웹사이트를 통해 구매할 수 있는 게재 상품 및 서비스에 대한 정보는 판매자에 의해 제공됩니다. 따라서 호텔스닷컴은 이와 관련된 정보의 정확성과 완전성 여부에 대해
+                        책임을 지지 않습니다.
+                    </span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
